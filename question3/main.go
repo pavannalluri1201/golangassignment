@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func findPosition(arr []int, target int) int {
+func posistion(arr []int, result int) int {
 	for i, num := range arr {
-		if num == target {
+		if num == result {
 			return i
 		}
 	}
@@ -12,11 +12,12 @@ func findPosition(arr []int, target int) int {
 }
 
 func main() {
-	numbers := []int{10, 20, 30, 40, 50}
-
-	targetNumber := 30
-
-	position := findPosition(numbers, targetNumber)
-
-	fmt.Printf("The position of %d in the array is %d.\n", targetNumber, position)
+	a := []int{5, 6, 7, 8, 9, 10}
+	b := 9
+	location := posistion(a, b)
+	if location == -1 {
+		fmt.Println("the given value does not exist in the array")
+	} else {
+		fmt.Printf("the posistion of %d in the given array is at : %d", b, location)
+	}
 }
